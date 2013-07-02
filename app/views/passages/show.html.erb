@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <b>Display Day:</b>
+  <%= @passage.display_day.strftime("%d %B %Y") %>
+</p>
+
+<p>
   <b>Passage start:</b>
   <%= @passage.passage_start %>
 </p>

@@ -1,9 +1,16 @@
 
 <div class="dailybread-container">
-	<h1>Daily Bread</h1>
+	<div class="title"><h1>Daily Bread</h1></div>
+	<div>&nbsp;</div>
 	<% if @daily_passage %>
 	<div class="passage">
-		<%= @daily_passage.passage_start %>
+
+		<div class="well span9">
+			<div class="passage_start pull-left"><%= @daily_passage.passage_start %></div>
+			<div class="passage_end pull-right"><%= @daily_passage.passage_end %></div>
+		</div>
+		
+		<div class="passage_text well span9 "><%= @daily_passage.passage_text %></div>
 	</div>
 	<% else %>
 	No passage for today. Please come back tomorrow!

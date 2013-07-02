@@ -41,6 +41,7 @@ class PassagesController < ApplicationController
   # POST /passages.json
   def create
     @passage = Passage.new(params[:passage])
+    @passage.display_day = Date.parse(params[:passage]['display_day'])
 
     respond_to do |format|
       if @passage.save
