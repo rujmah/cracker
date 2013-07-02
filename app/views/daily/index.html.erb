@@ -1,0 +1,11 @@
+
+<div class="dailybread-container">
+	<h1>Daily Bread</h1>
+	<% if @daily_passage %>
+	<div class="passage">
+		<%= @daily_passage.passage_start %>
+	</div>
+	<% else %>
+	No passage for today. Please come back tomorrow!
+	<% end %>
+</div>
